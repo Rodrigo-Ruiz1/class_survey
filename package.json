@@ -1,0 +1,16 @@
+{
+  "name": "class_survey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "db:init": "psql -f ./sql/schema.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
+    "db:seed": "psql -f ./sql/seed.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
+    "db:drop": "psql -f ./sql/reset.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
+    "db:reset": "npm run db:drop; npm run db:init;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
