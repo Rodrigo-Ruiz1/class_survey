@@ -11,9 +11,9 @@ VALUES
 INSERT INTO topics
     (topic_name, topic_score)
 VALUES
-    ('HTML', '2'),
-    ('CSS', '2'),
-    ('Javascript', '4'),
-    ('PostgreSQL', '1'),
-    ('Node', '3'),
-    ('Express', '4');
+    ('HTML', 6),
+    ('CSS', 6),
+    ('Javascript', 6),
+    ('PostgreSQL', 6),
+    ('Node', 6),
+    ('Express', 6);
