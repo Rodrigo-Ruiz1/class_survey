@@ -2,15 +2,23 @@
   "name": "class_survey",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "db:init": "psql -f ./sql/schema.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
     "db:seed": "psql -f ./sql/seed.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
     "db:drop": "psql -f ./sql/reset.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
     "db:reset": "npm run db:drop; npm run db:init;",
+    "dev": "nodemon app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg-promise": "^10.10.2"
+  }
 }
