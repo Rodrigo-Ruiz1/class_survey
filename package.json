@@ -4,10 +4,6 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "db:init": "psql -f ./sql/schema.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
-    "db:seed": "psql -f ./sql/seed.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
-    "db:drop": "psql -f ./sql/reset.sql postgres://bittabph:EJfwgYtBTy4HrFzQZywhZbCqHkKqYVAk@batyr.db.elephantsql.com/bittabph",
-    "db:reset": "npm run db:drop; npm run db:init;",
     "dev": "nodemon app.js",
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
