@@ -37,14 +37,14 @@ router.get('/error', async (req, res) => {
             body: 'partials/error'
         }
     })
-})
+});
 
 router.post('/update', async (req, res) => {
     let response;
 
     for (let key in req.body) {
         console.log("KEY AND VALUE:", key, req.body[key]);
-        const response = await ClassSurveyModel.updateRanking(key, req.body[key]);
+        response = await ClassSurveyModel.updateRanking(key, req.body[key]);
     }
     if (response.rowCount !== 1) {
         res.redirect(`/error?error=${response}`);
@@ -52,7 +52,6 @@ router.post('/update', async (req, res) => {
         res.redirect('/');
     }
     // console.log("RESPONSE IN POST: ", response);
-    res.redirect('/');
 })
 
 module.exports = router;
